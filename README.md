@@ -13,6 +13,12 @@ Every card has five forbidden words.
 
 Cards don't repeat until you've seen every card at that difficulty.
 
+## Timer
+
+Set the round timer on the home screen with − and +, in 15-second steps up to 5 minutes,
+or all the way down to **No timer**. When time runs out the card is replaced by "Time's up!"
+and **Play again** starts a fresh round. You can pause mid-round, which hides the card.
+
 ## Building
 
 Open the project in Android Studio, or from the command line:
@@ -29,5 +35,6 @@ Every push and pull request is built by GitHub Actions, which uploads the debug 
 
 - `game/Game.kt`: cards, difficulty levels and the shuffled deck (plain Kotlin, unit tested).
 - `game/StarterDeck.kt`: the 125 built-in cards, tagged by difficulty.
-- `GameViewModel.kt`: holds the chosen difficulty and the current card.
+- `game/RoundTimer.kt`: timer length steps and formatting.
+- `GameViewModel.kt`: holds the settings and current card, and runs the countdown.
 - `ui/`: the Jetpack Compose home and card screens.
